@@ -35,6 +35,8 @@ public class Hello extends CordovaPlugin {
                     batteryCallbackContext.sendPluginResult(result);
                 }
             };
+
+            webView.getContext().registerReceiver(receiver, intentFilter);
         }
 
         @Override
@@ -44,6 +46,11 @@ public class Hello extends CordovaPlugin {
 
                 this.batteryCallbackContext = callbackContext;
                 getBatteryLevel();
+
+                 PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
+                            pluginResult.setKeepCallback(true);
+                            callbackContext.sendPluginResult(pluginResult);
+
                 return true;
 
             } else {
