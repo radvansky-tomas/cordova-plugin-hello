@@ -5,6 +5,11 @@
 
   <name>Hello</name>
 
+  <dependency
+          id="es6-promise-plugin"
+          url="https://github.com/vstirbu/PromisesPlugin.git">
+  </dependency>
+
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
