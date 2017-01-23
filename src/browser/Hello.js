@@ -1,9 +1,13 @@
+'use strict';
 /**
  * Created by tomasradvansky on 16/01/2017.
  */
+var Promise = require('promise');
 
-function greet(success, error, opts) {
-    success('dummy');
+function greet(opts) {
+    return new Promise(function (fulfill, reject) {
+       reject("This plugin cannot work in browser!");
+    });
 }
 
 module.exports = {
