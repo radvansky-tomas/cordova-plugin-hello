@@ -2,7 +2,6 @@
 /**
  * Created by tomasradvansky on 16/01/2017.
  */
-var Promise = require('promise');
 
 function greet(opts) {
     return new Promise(function (fulfill, reject) {
